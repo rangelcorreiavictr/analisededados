@@ -1,0 +1,37 @@
+listacandidatos=[]
+candi = []
+    
+repita = input(("Se você deseja começar o cadastro de dados digite sim."))
+
+while repita == "sim":
+    
+    can = input(("escreva o nome do candidaro para armazenamento para o banco:"))
+    candi.append(can)
+        
+    en = float(input("digite a nota da entrevista para o banco:"))
+    te = float(input("digite a nota teorica para o banco de dados:"))
+    pra = float(input("digite a nota pratica para obanco de dados:"))
+    so = float(input("digite a nota soft para o banco de dados"))
+       
+    listacandidatos.append(f"e{format(en)}_t{format(te)}_p{format(pra)}_s{format(so)}")
+
+print(
+    repita = input("deseja continuar?")
+        
+else:
+    
+    print ("obrigado pelo cadastro de dados")
+    
+e = input (("digite a nota média desejada da entrevista"))
+t = input(("digite a nota média desejada da teórico"))
+p = input (("digite a nota média desejada da prático"))
+s = input (("digite a nota média desejada da soft"))
+         
+def rh(e,t,p,s):
+    
+    for a, b in zip(listacandidatos,candi):
+    
+        if e>=a[1] and t>=a[4] and p>=a[6] and s>=a[8]:
+            print(f"o candidato{b}, com os parâmetros{a}, está aprovado")    
+
+rh(e,t,p,s)
